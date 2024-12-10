@@ -1,51 +1,41 @@
-
-body {
-  overflow-x: hidden;
-}
-
 /* Стиль для змінюваного тексту */
 #rotating-text {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    font-size: 2rem; /* Збільшуємо розмір тексту */
-    color: #C479E6; /* Яскравий колір для виділення */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Тінь для кращої видимості */
-  }
-  
-  /* Клас для активації видимості */
-  #rotating-text.visible {
-    opacity: 1;
-  }
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  font-size: 2rem; /* Збільшуємо розмір тексту */
+  color: #C479E6; /* Яскравий колір для виділення */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Тінь для кращої видимості */
+}
 
-  
+/* Клас для активації видимості */
+#rotating-text.visible {
+  opacity: 1;
+}
+
+#hero {
+  padding-top: 80px; /* Враховує фіксований навбар */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
   #hero {
-    padding-top: 80px; /* Враховує фіксований навбар */
+    text-align: center;
+    padding: 20px;
   }
 
-  @media (max-width: 768px) {
-    #hero {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    #rotating-text {
-      font-size: 1rem;
-    }
-
-    a.primary-color {
-      padding: 10px 20px;
-      font-size: 1rem;
-    }
+  #rotating-text {
+    font-size: 1.5rem;
   }
 
-  @media (max-width: 768px) {
-    #hero {
-      padding: 20px;
-    }
-  
-    .container {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
   }
-  
+
+  a.primary-color {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
