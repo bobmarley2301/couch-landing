@@ -1,0 +1,30 @@
+/* Стиль для змінюваного тексту */
+#rotating-text {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    font-size: 2rem; /* Збільшуємо розмір тексту */
+    color: #C479E6; /* Яскравий колір для виділення */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Тінь для кращої видимості */
+  }
+  
+  /* Клас для активації видимості */
+  #rotating-text.visible {
+    opacity: 1;
+  }
+
+  /* Змінюємо колір кнопок навігації */
+.swiper-button-next, .swiper-button-prev {
+  color: #C479E6;
+}
+
+/* Змінюємо колір пагінації */
+.swiper-pagination-bullet {
+  background-color: #C479E6;
+}
+
+/* Змінюємо колір активної пагінації */
+.swiper-pagination-bullet-active {
+  background-color: #C479E6;
+}
+  
+  
