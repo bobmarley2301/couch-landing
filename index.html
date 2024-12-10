@@ -38,65 +38,72 @@
 
     <body class="bg-gray-100 text-gray-800">
 
-        <!-- Navbar -->
-<nav class="bg-white shadow-lg fixed w-full z-10" data-aos="fade-down">
-  <div class="container mx-auto px-4 flex justify-between items-center py-4">
-    <!-- Логотип -->
-    <a href="#" class="text-2xl font-bold secondary-color">Ганна Ощепкова</a>
-    
-    <!-- Кнопка для мобільного меню -->
-    <button id="menu-toggle" class="block md:hidden focus:outline-none">
-      <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </button>
+            <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full z-10" data-aos="fade-down">
+      <div class="container mx-auto px-4 flex justify-between items-center py-4">
+        <!-- Логотип -->
+        <a href="#" class="text-2xl font-bold secondary-color">Ганна Ощепкова</a>
+        
+        <!-- Кнопка для мобільного меню -->
+        <button id="menu-toggle" class="block md:hidden focus:outline-none">
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
 
-    <!-- Навігаційні посилання -->
-    <ul id="menu" class="hidden md:flex space-x-6 text-xl">
-      <li><a href="#hero" class="text-gray-700 hover:text-primary hover:underline">Головна</a></li>
-      <li><a href="#відгуки" class="text-gray-700 hover:text-primary hover:underline">Відгуки</a></li>
-      <li><a href="#як-це-працює" class="text-gray-700 hover:text-primary hover:underline">Як це працює</a></li>
-      <li><a href="#зворотній-зв'язок" class="text-gray-700 hover:text-primary hover:underline">Контакти</a></li>
-    </ul>
+        <!-- Навігаційні посилання -->
+        <ul id="menu" class="hidden md:flex space-x-6 text-xl">
+          <li><a href="#hero" class="text-gray-700 hover:text-primary hover:underline">Головна</a></li>
+          <li><a href="#відгуки" class="text-gray-700 hover:text-primary hover:underline">Відгуки</a></li>
+          <li><a href="#як-це-працює" class="text-gray-700 hover:text-primary hover:underline">Як це працює</a></li>
+          <li><a href="#зворотній-зв'язок" class="text-gray-700 hover:text-primary hover:underline">Контакти</a></li>
+        </ul>
 
-    <!-- Мобільне меню -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute top-0 left-0 w-full z-10 mt-16">
-      <ul class="space-y-4 py-4">
-        <li><a href="#hero" class="block text-gray-700 hover:text-primary hover:underline px-4 py-2">Головна</a></li>
-        <li><a href="#відгуки" class="block text-gray-700 hover:text-primary hover:underline px-4 py-2">Відгуки</a></li>
-        <li><a href="#як-це-працює" class="block text-gray-700 hover:text-primary hover:underline px-4 py-2">Як це працює</a></li>
-        <li><a href="#зворотній-зв'язок" class="block text-gray-700 hover:text-primary hover:underline px-4 py-2">Контакти</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+        <!-- Мобільне меню -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute top-0 left-0 w-full z-10 mt-16">
+          <ul class="space-y-4 py-4">
+            <li><a href="#hero" class="block text-gray-700 hover:text-primary hover:underline px-4 py-2">Головна</a></li>
+            <li><a href="#відгуки" class="block text-gray-700 hover:text-primary hover:underline px-4 py-2">Відгуки</a></li>
+            <li><a href="#як-це-працює" class="block text-gray-700 hover:text-primary hover:underline px-4 py-2">Як це працює</a></li>
+            <li><a href="#зворотній-зв'язок" class="block text-gray-700 hover:text-primary hover:underline px-4 py-2">Контакти</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
       
         
 
         <!-- Hero Section -->
-        <section id="hero" class="bg-white min-h-screen flex items-center"  data-aos="fade-up">
-            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+        <section id="hero" class="bg-white min-h-screen flex items-center" data-aos="fade-up">
+          <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            
             <!-- Текстова частина -->
             <div class="w-full md:w-1/2 text-center md:text-left">
-                <h1 class="text-5xl font-bold secondary-color leading-tight">Ганна Ощепкова</h1>
-                <p class="text-lg mt-4">Коуч із персонального та професійного розвитку</p>
-                <p class="mt-6 text-lg">Досягни внутрішнього спокою та стабільності у житті вже сьогодні!</p>
-                
-                <!-- Фрази, що змінюються -->
-                <div id="rotating-text" class="text-2xl font-semibold text-primary mt-6 opacity-0 transition-opacity duration-1000"></div>
-        
-                <div class="mt-8 flex justify-center">
-                    <a href="#як-це-працює" class="primary-color px-8 py-4 rounded-lg shadow-lg text-lg animate-bounce">ЗАБРОНЮВАТИ СЕСІЮ</a>
-                </div>
+              <h1 class="text-4xl md:text-5xl font-bold secondary-color leading-tight">
+                Ганна Ощепкова
+              </h1>
+              <p class="text-lg mt-4">Коуч із персонального та професійного розвитку</p>
+              <p class="mt-6 text-lg">Досягни внутрішнього спокою та стабільності у житті вже сьогодні!</p>
+
+              <!-- Фрази, що змінюються -->
+              <div id="rotating-text" class="text-2xl font-semibold text-primary mt-6 opacity-0 transition-opacity duration-1000"></div>
+
+              <div class="mt-8 flex justify-center md:justify-start">
+                <a href="#як-це-працює" class="primary-color px-8 py-4 rounded-lg shadow-lg text-lg animate-bounce">
+                  ЗАБРОНЮВАТИ СЕСІЮ
+                </a>
+              </div>
             </div>
             
             <!-- Зображення -->
             <div class="w-full md:w-1/2 mt-10 md:mt-0">
-                <img src="assets/HERO.jpg" alt="Фото Ганни Ощепкової" class="rounded-lg shadow-lg mx-auto" data-aos="fade-left">
+              <img src="assets/HERO.jpg" alt="Фото Ганни Ощепкової" class="rounded-lg shadow-lg mx-auto" data-aos="fade-left">
             </div>
-            </div>
+
+          </div>
         </section>
+
 
 
         <section id="block-2" class="bg-gradient-to-r from-[#C479E6] to-[#9A4CBA] text-white py-16" style="margin-top: 15%;" data-aos="fade-up">
@@ -124,9 +131,6 @@
         <section id="відео-знайомство" class="py-16" style="margin-top: 10%;" data-aos="fade-up">
           <div class="container mx-auto px-4 text-center">
               <h2 class="text-4xl font-extrabold secondary-color mb-8 leading-tight">Знайомство з Ганною Ощепковою</h2>
-              <p class="text-lg text-white mb-8">
-                  Дізнайся більше про мене та мою місію в коучингу. Переглянь відео, щоб зрозуміти, як я можу допомогти тобі досягти своїх цілей.
-              </p>
               
               <!-- Вбудоване відео (адаптивний плеєр) -->
               <div class="relative w-full h-0" style="padding-bottom: 56.25%; /* Aspect ratio 16:9 */">
@@ -148,32 +152,38 @@
 
         <section id="результати-співпраці" class="py-16 bg-gradient-to-r from-[#C479E6] to-[#9A4CBA]" style="margin-top: 10%;" data-aos="fade-up">
           <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-extrabold secondary-color mb-8 leading-tight" data-aos="fade-up">
-              Результати який ти отримаєш зі мною
+            <h2 class="text-3xl md:text-4xl font-extrabold secondary-color mb-8 leading-tight" data-aos="fade-up">
+              Результати, які ти отримаєш зі мною
             </h2>
-              <p class="text-lg text-white mb-8">
-                  В результаті нашої співпраці ти отримаєш безліч корисних результатів, які допоможуть тобі рухатися вперед.
+            <p class="text-lg text-white mb-8">
+              В результаті нашої співпраці ти отримаєш безліч корисних результатів, які допоможуть тобі рухатися вперед.
+            </p>
+
+            <ul class="list-disc text-left text-white space-y-4 mx-auto max-w-3xl animate__animated animate__fadeInUp">
+              <li>Зрозумієш, який твій реальний запит та бажаний напрямок руху.</li>
+              <li>Виявиш суть проблеми, яка завела тебе в глухий кут.</li>
+              <li>Отримаєш покроковий план вирішення проблеми та доведення до бажаного результату.</li>
+              <li>Практичний план реалізації ідеї, масштабування бізнесу, виходу на новий фінансовий рівень.</li>
+              <li>Прокачаєш навички ставити цілі, планувати, будувати шлях їх досягнення, тримати баланс між роботою й особистим життям.</li>
+              <li>Відчуєш прилив енергії, впевненість і мотивацію рухатися вперед.</li>
+              <li>Розвинеш в собі лідерські якості та навички.</li>
+            </ul>
+
+            <!-- Кольорова смужка з текстом -->
+            <div class="bg-white text-[#C479E6] py-4 mt-8 rounded-3xl shadow-xl animate__animated animate__fadeInUp">
+              <p class="text-xl font-bold px-4 md:px-0">
+                ЗАБРОНЮЙ ІНДИВІДУАЛЬНУ СЕСІЮ, ЩОБ ДОДАТИ У СВОЄ ЖИТТЯ БІЛЬШЕ ЕНЕРГІЇ, СПОКОЮ І КЛАСНИХ РЕЗУЛЬТАТІВ
               </p>
+            </div>
 
-              <ul class="list-disc text-left text-white space-y-4 mx-auto max-w-3xl animate__animated animate__fadeInUp">
-                  <li>Зрозумієш, який твій реальний запит та бажаний напрямок руху.</li>
-                  <li>Виявиш суть проблеми, яка завела тебе в глухий кут.</li>
-                  <li>Отримаєш покроковий план вирішення проблеми та доведення до бажаного результату.</li>
-                  <li>Практичний план реалізації ідеї, масштабування бізнесу, виходу на новий фінансовий рівень.</li>
-                  <li>Прокачаєш навички ставити цілі, планувати, будувати шлях їх досягнення, тримати баланс між роботою й особистим життям.</li>
-                  <li>Відчуєш прилив енергії, впевненість і мотивацію рухатися вперед.</li>
-                  <li>Розвинеш в собі лідерські якості та навички.</li>
-              </ul>
-
-              <!-- Кольорова смужка з текстом -->
-              <div class="bg-white text-[#C479E6] py-4 mt-8 rounded-3xl shadow-xl animate__animated animate__fadeInUp">
-                  <p class="text-xl font-bold">ЗАБРОНЮЙ ІНДИВІДУАЛЬНУ СЕСІЮ, ЩОБ ДОДАТИ У СВОЄ ЖИТТЯ БІЛЬШЕ ЕНЕРГІЇ, СПОКОЮ І КЛАСНИХ РЕЗУЛЬТАТІВ</p>
-              </div>
-              <div class="mt-8 flex justify-center">
-                <a href="#як-це-працює" class="primary-color px-8 py-4 rounded-lg shadow-lg text-lg bg:hover:grey">ЗАБРОНЮВАТИ СЕСІЮ</a>
-              </div>
+            <div class="mt-8 flex justify-center">
+              <a href="#як-це-працює" class="primary-color px-8 py-4 rounded-lg shadow-lg text-lg bg:hover:grey">
+                ЗАБРОНЮВАТИ СЕСІЮ
+              </a>
+            </div>
           </div>
         </section>
+
   
 
         <!-- Відгуки Section -->
