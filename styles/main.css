@@ -12,19 +12,29 @@
     opacity: 1;
   }
 
-  /* Змінюємо колір кнопок навігації */
-.swiper-button-next, .swiper-button-prev {
-  color: #C479E6;
-}
-
-/* Змінюємо колір пагінації */
-.swiper-pagination-bullet {
-  background-color: #C479E6;
-}
-
-/* Змінюємо колір активної пагінації */
-.swiper-pagination-bullet-active {
-  background-color: #C479E6;
-}
   
-  
+  #hero {
+    padding-top: 80px; /* Враховує фіксований навбар */
+  }
+
+  @media (max-width: 768px) {
+    #hero {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    #rotating-text {
+      font-size: 1rem;
+    }
+
+    a.primary-color {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 769px) {
+    #hero {
+      padding: 0;
+    }
+  }
