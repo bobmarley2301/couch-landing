@@ -11,6 +11,9 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+      
       <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
       <link
         rel="stylesheet"
@@ -42,7 +45,7 @@
     <body class="bg-gray-150 text-gray-800">
 
       
-      <nav class=" shadow-lg fixed w-full z-10" data-aos="fade-down">
+      <nav class="shadow-lg fixed w-full z-10" data-aos="fade-down">
         <div class="container mx-auto px-4 flex justify-between items-center py-4">
           <!-- Логотип -->
           <a href="#" class="text-2xl font-bold secondary-color">Ганна Ощепкова</a>
@@ -56,23 +59,78 @@
       
           <!-- Навігаційні посилання -->
           <ul id="menu" class="hidden md:flex space-x-6 text-xl">
-            <li><a href="#hero" class="text-gray-700 hover:text-primary hover:underline">Головна</a></li>
-            <li><a href="#відгуки" class="text-gray-700 hover:text-primary hover:underline">Відгуки</a></li>
-            <li><a href="#як-це-працює" class="text-gray-700 hover:text-primary hover:underline">Як це працює</a></li>
-            <li><a href="#зворотній-зв'язок" class="text-gray-700 hover:text-primary hover:underline">Контакти</a></li>
+            <li>
+              <a href="#hero" class="text-gray-700 hover:text-primary hover:underline flex items-center space-x-2">
+                <i class="fas fa-home"></i>
+                <span>Головна</span>
+              </a>
+            </li>
+            <li>
+              <a href="#відгуки" class="text-gray-700 hover:text-primary hover:underline flex items-center space-x-2">
+                <i class="fas fa-comment-alt"></i>
+                <span>Відгуки</span>
+              </a>
+            </li>
+            <li>
+              <a href="#як-це-працює" class="text-gray-700 hover:text-primary hover:underline flex items-center space-x-2">
+                <i class="fas fa-cogs"></i>
+                <span>Як це працює</span>
+              </a>
+            </li>
+            <li>
+              <a href="#зворотній-зв'язок" class="text-gray-700 hover:text-primary hover:underline flex items-center space-x-2">
+                <i class="fas fa-envelope"></i>
+                <span>Контакти</span>
+              </a>
+            </li>
           </ul>
       
-          <!-- Мобільне меню -->
-          <div id="mobile-menu" class="hidden bg-white shadow-lg absolute top-full left-0 w-full z-10">
-            <ul class="space-y-4 py-4">
-              <li><a href="#hero" class="block text-gray-700 hover:text-primary hover:underline px-4 py-2">Головна</a></li>
-              <li><a href="#відгуки" class="block text-gray-700 hover:text-primary hover:underline px-4 py-2">Відгуки</a></li>
-              <li><a href="#як-це-працює" class="block text-gray-700 hover:text-primary hover:underline px-4 py-2">Як це працює</a></li>
-              <li><a href="#зворотній-зв'язок" class="block text-gray-700 hover:text-primary hover:underline px-4 py-2">Контакти</a></li>
-            </ul>
+          <!-- Соціальні мережі -->
+          <div class="flex space-x-6">
+            <a href="https://www.tiktok.com" target="_blank" class="text-gray-700 hover:text-primary text-2xl">
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="text-gray-700 hover:text-primary text-2xl">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="text-gray-700 hover:text-primary text-2xl">
+              <i class="fab fa-facebook"></i>
+            </a>
           </div>
         </div>
+      
+        <!-- Мобільне меню -->
+        <div id="mobile-menu" class="hidden bg-white shadow-lg absolute top-full left-0 w-full z-10">
+          <ul class="space-y-4 py-4">
+            <li>
+              <a href="#hero" class="block text-gray-700 hover:text-primary hover:underline px-4 py-2 flex items-center space-x-2">
+                <i class="fas fa-home"></i>
+                <span>Головна</span>
+              </a>
+            </li>
+            <li>
+              <a href="#відгуки" class="block text-gray-700 hover:text-primary hover:underline px-4 py-2 flex items-center space-x-2">
+                <i class="fas fa-comment-alt"></i>
+                <span>Відгуки</span>
+              </a>
+            </li>
+            <li>
+              <a href="#як-це-працює" class="block text-gray-700 hover:text-primary hover:underline px-4 py-2 flex items-center space-x-2">
+                <i class="fas fa-cogs"></i>
+                <span>Як це працює</span>
+              </a>
+            </li>
+            <li>
+              <a href="#зворотній-зв'язок" class="block text-gray-700 hover:text-primary hover:underline px-4 py-2 flex items-center space-x-2">
+                <i class="fas fa-envelope"></i>
+                <span>Контакти</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
+      
+      
       
       <!-- Hero -->
       <section id="hero" class="min-h-screen py-10">
@@ -337,12 +395,8 @@
         </div>
       </section>
 
-
-
-
-
         <!-- Контакти Section -->
-        <section id="зворотній-зв'язок" class="bg-gray-100 py-16" data-aos="fade-up" style="margin-top: 10%;">
+        <section id="зворотній-зв'язок" class="py-16" data-aos="fade-up" style="margin-top: 10%;">
             <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold secondary-color mb-6">Зворотній зв'язок</h2>
             <p class="text-lg text-gray-700 mb-4">Запишись на сесію або задай питання</p>
