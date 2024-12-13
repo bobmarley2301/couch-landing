@@ -177,9 +177,30 @@
 </section>
 
 
-        <section id="результати-співпраці" class="py-16 bg-gradient-to-r from-[#9A4CBA] to-[#6A3093] mt-0 md:mt-10" data-aos="fade-up">
-          <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-[#F2E9FF] mb-8 leading-tight" data-aos="fade-up">
+<!-- video -->
+
+<section id="video-player" class="py-16 bg-gradient-to-b from-gray-50 to-gray-100" style="margin-top: 20%;">
+  <div class="container mx-auto px-4 max-w-7xl">
+    <!-- Відеоплеєр -->
+    <div class="relative flex justify-center">
+      <div class="w-full max-w-5xl rounded-xl overflow-hidden shadow-2xl transition-all duration-300 hover:shadow-[0_0_150px_#C479E6]">
+        <!-- Plyr відео -->
+        <video id="plyr-player" class="plyr w-full h-auto rounded-xl" playsinline controls>
+          <source src="assets/IMG_6793.mp4" type="video/mp4" />
+          Ваш браузер не підтримує відео. Будь ласка, оновіть його або використовуйте інший.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  <section id="результати-співпраці" class="py-16 bg-gradient-to-r from-[#9A4CBA] to-[#6A3093] mt-0 md:mt-10" data-aos="fade-up">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-[#F2E9FF] mb-8 leading-tight" data-aos="fade-up">
               Результати, які ти отримаєш зі мною
             </h2>
             <p class="text-lg text-white mb-8">
@@ -490,8 +511,25 @@
 
 
         <!-- Підключення AOS -->
+        <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+        <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
         <script src="text.js"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const player = new Plyr("#plyr-player", {
+              controls: [
+                "play", 
+                "progress", 
+                "current-time", 
+                "mute", 
+                "volume", 
+                "settings", 
+                "fullscreen"
+              ],
+            });
+          });
+        </script>   
         <script>
             AOS.init({
               delay: 300,
