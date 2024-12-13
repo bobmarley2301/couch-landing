@@ -65,3 +65,7 @@
 .swiper-pagination-bullet-active {
     background-color: #C479E6 !important;
 }
+
+.no-select {
+  user-select: none; /* Зупиняє виділення тексту */
+}
