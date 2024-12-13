@@ -475,10 +475,10 @@
 
                   <!-- Чекбокс для підтвердження політики конфіденційності та умов оферти -->
                   <div class="mb-4 flex items-center">
-                      <input type="checkbox" id="termsCheckbox" name="terms" class="mr-2" required>
-                      <label for="termsCheckbox" class="text-sm text-gray-700">
-                          Я погоджуюсь з <a href="pages/privacy-policy.html" class="text-blue-500 hover:underline">Політикою конфіденційності</a> та <a href="pages/public-offer.html" class="text-blue-500 hover:underline">Умовами оферти</a>.
-                      </label>
+                    <input type="checkbox" id="termsCheckbox" name="terms" class="mr-2" required>
+                    <label for="termsCheckbox" class="text-sm text-gray-700">
+                        Я погоджуюсь з <a href="pages/privacy-policy.html" class="text-blue-500 hover:underline">Політикою конфіденційності</a> та <a href="pages/public-offer.html" class="text-blue-500 hover:underline">Умовами оферти</a>.
+                    </label>
                   </div>
 
                   <button type="submit" class="primary-color text-xl font-bold text-white px-8 py-4 rounded-lg">Надіслати</button>
@@ -541,10 +541,19 @@
 
           const token = '7659930943:AAGa6mWEcghRjc2XGidjFaB4qI88sjSt0xI';
           const chatId = '501849323';
+          
+
+
 
           document.getElementById('contactForm').addEventListener('submit', function (event) {
               event.preventDefault();
 
+              // Перевірка чи чекбокс позначений
+              const termsChecked = document.getElementById('termsCheckbox').checked;
+              if (!termsChecked) {
+                  alert('Будь ласка, погодьтеся з політикою конфіденційності та умовами оферти.');
+                  return;  // Не відправляти форму, якщо чекбокс не позначений
+              }
               // Збираємо дані з полів форми
               const name = document.querySelector('input[name="name"]').value;
               const email = document.querySelector('input[name="email"]').value;
