@@ -461,58 +461,126 @@
       
       
 
-        <!-- Контакти Section -->
+       <!-- Контакти Section -->
         <section id="зворотній-зв'язок" class="py-16" data-aos="fade-up" style="margin-top: 10%;">
-            <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold secondary-color mb-6">Зворотній зв'язок</h2>
-            <p class="text-lg text-gray-700 mb-4">Маєш питання? Заповнюй форму зворотного зв'язку, і я відповім на всі питання особисто.</p>
-            <form action="#" method="post" class="max-w-lg mx-auto">
-                <input type="text" name="name" class="w-full p-4 border-2 border-gray-300 rounded-lg mb-4" placeholder="Ваше ім'я">
-                <input type="email" name="email" class="w-full p-4 border-2 border-gray-300 rounded-lg mb-4" placeholder="Ваш email">
-                <textarea name="message" class="w-full p-4 border-2 border-gray-300 rounded-lg mb-4" placeholder="Ваше повідомлення"></textarea>
-                <button type="submit" class="primary-color text-xl font-bold text-white px-8 py-4 rounded-lg">Надіслати</button>
-            </form>
-            </div>
+          <div class="container mx-auto px-4 text-center">
+              <h2 class="text-3xl font-bold secondary-color mb-6">Зворотній зв'язок</h2>
+              <p class="text-lg text-gray-700 mb-4">Маєш питання? Заповнюй форму зворотного зв'язку, і я відповім на всі питання особисто.</p>
+              <form id="contactForm" action="#" method="post" class="max-w-lg mx-auto">
+                  <input type="text" name="name" class="w-full p-4 border-2 border-gray-300 rounded-lg mb-4" placeholder="Ваше ім'я" required>
+                  <input type="email" name="email" class="w-full p-4 border-2 border-gray-300 rounded-lg mb-4" placeholder="Ваш email" required>
+                  <input type="text" name="phone" class="w-full p-4 border-2 border-gray-300 rounded-lg mb-4" placeholder="Ваш телефон (опціонально)">
+                  <input type="text" name="telegram" class="w-full p-4 border-2 border-gray-300 rounded-lg mb-4" placeholder="Ваш Telegram (опціонально)">
+                  <textarea name="message" class="w-full p-4 border-2 border-gray-300 rounded-lg mb-4" placeholder="Ваше повідомлення" required></textarea>
+
+                  <!-- Чекбокс для підтвердження політики конфіденційності та умов оферти -->
+                  <div class="mb-4 flex items-center">
+                      <input type="checkbox" id="termsCheckbox" name="terms" class="mr-2" required>
+                      <label for="termsCheckbox" class="text-sm text-gray-700">
+                          Я погоджуюсь з <a href="pages/privacy-policy.html" class="text-blue-500 hover:underline">Політикою конфіденційності</a> та <a href="pages/public-offer.html" class="text-blue-500 hover:underline">Умовами оферти</a>.
+                      </label>
+                  </div>
+
+                  <button type="submit" class="primary-color text-xl font-bold text-white px-8 py-4 rounded-lg">Надіслати</button>
+              </form>
+
+              <!-- Підтвердження після відправки -->
+              <div id="confirmationMessage" class="mt-6 hidden text-xl text-green-600 font-bold">
+                  Дякуємо! Ваше повідомлення було успішно надіслано.
+              </div>
+          </div>
         </section>
+
+
 
 
         <!-- Footer -->
         <section class="bg-gradient-to-r from-[#9A4CBA] to-[#6A3093] text-white py-8">
           <div class="container mx-auto px-4">
-              <div class="flex flex-wrap justify-between">
-                  <div class="w-full md:w-1/3 mb-6 md:mb-0">
-                      <h5 class="text-lg font-bold mb-4">Про нас</h5>
-                      <p>Коучинг Ганни Ощепкової - це ваш шлях до успіху та саморозвитку. Ми допомагаємо досягати цілей та розкривати потенціал.</p>
-                  </div>
-                  <div class="w-full md:w-1/3 mb-6 md:mb-0">
-                      <h5 class="text-lg font-bold mb-4">Контакти</h5>
-                      <ul>
-                          <li class="mb-2"><i class="fas fa-phone-alt"></i>+380 (99) 428 57 71 </li>
-                          <li class="mb-2"><i class="fas fa-envelope"></i>annaoshchepkova@gmail.com</li>
-                          <li><i class="fas fa-map-marker-alt"></i> Івано-Франківськ, Україна</li>
-                      </ul>
-                  </div>
-                  <div class="w-full md:w-1/3">
-                      <h5 class="text-lg font-bold mb-4">Соціальні мережі</h5>
-                      <ul class="flex space-x-4">
-                          <li><a href="https://www.facebook.com/KramatorskAnna" class="text-white hover:text-gray-200"><i class="fab fa-facebook-f"></i></a></li>
-                          <li><a href="https://www.instagram.com/oshchepkovaganna/" class="text-white hover:text-gray-200"><i class="fab fa-instagram"></i></a></li>
-                          <li><a href="https://www.tiktok.com/@annaoshchepkova_?_t=8s7tL9TzZnK&_r=1" class="text-white hover:text-gray-200"><i class="fab fa-tiktok"></i></a></li>
-                      </ul>
-                  </div>
+            <div class="flex flex-wrap justify-between">
+              <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                <h5 class="text-lg font-bold mb-4">Про нас</h5>
+                <p>Коучинг Ганни Ощепкової - це ваш шлях до успіху та саморозвитку. Ми допомагаємо досягати цілей та розкривати потенціал.</p>
               </div>
-              <div class="mt-8 text-center">
-                  <p>&copy; 2024 Коучинг Ганни Ощепкової. Всі права захищені.</p>
+              <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                <h5 class="text-lg font-bold mb-4">Контакти</h5>
+                <ul>
+                  <li class="mb-2"><i class="fas fa-phone-alt"></i>+380(50)477-87-72</li>
+                  <li class="mb-2"><i class="fas fa-envelope"></i>annaoshchepkova@gmail.com</li>
+                  <li><i class="fas fa-map-marker-alt"></i> Івано-Франківськ, Україна</li>
+                </ul>
               </div>
+              <div class="w-full md:w-1/3">
+                <h5 class="text-lg font-bold mb-4">Соціальні мережі</h5>
+                <ul class="flex space-x-4">
+                  <li><a href="https://www.facebook.com/KramatorskAnna" class="text-white hover:text-gray-200"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="https://www.instagram.com/oshchepkovaganna/" class="text-white hover:text-gray-200"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="https://www.tiktok.com/@annaoshchepkova_?_t=8s7tL9TzZnK&_r=1" class="text-white hover:text-gray-200"><i class="fab fa-tiktok"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-8 text-center">
+              <p>&copy; 2024 Коучинг Ганни Ощепкової. Всі права захищені.</p>
+              <div class="mt-4 text-sm">
+                <a href="pages/privacy-policy.html" class="text-white hover:text-gray-200">Політика конфіденційності</a> | 
+                <a href="pages/public-offer.html" class="text-white hover:text-gray-200">Умови оферти</a>
+              </div>
+            </div>
           </div>
         </section>
+
 
 
         <!-- Підключення AOS -->
         <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
         <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-        <script src="text.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <!-- Форма -->
+        <script>
+
+          const token = '7659930943:AAGa6mWEcghRjc2XGidjFaB4qI88sjSt0xI';
+          const chatId = '501849323';
+
+          document.getElementById('contactForm').addEventListener('submit', function (event) {
+              event.preventDefault();
+
+              // Збираємо дані з полів форми
+              const name = document.querySelector('input[name="name"]').value;
+              const email = document.querySelector('input[name="email"]').value;
+              const phone = document.querySelector('input[name="phone"]').value;
+              const telegram = document.querySelector('input[name="telegram"]').value;
+              const message = document.querySelector('textarea[name="message"]').value;
+
+                  // Формуємо текст повідомлення для Telegram
+              const telegramMessage = `
+                  🔔 Нова заявка на сайті! 🔔\n
+                  👤 Ім'я: ${name}\n
+                  📧 Email: ${email}\n
+                  📞 Телефон: ${phone}\n
+                  🗨 Telegram: ${telegram}\n
+                  ❓ Повідомлення: ${message}
+              `;
+
+              // Відправляємо повідомлення через Telegram Bot API
+              axios.get(`https://api.telegram.org/bot${token}/sendMessage`, {
+                  params: {
+                      chat_id: chatId,
+                      text: telegramMessage,
+                      parse_mode: 'HTML'
+                  }
+              })
+              .then(response => {
+                  alert('Повідомлення успішно надіслано!');
+                  console.log('Повідомлення успішно надіслано:', response);
+                  document.getElementById('contactForm').reset();  // Очищаємо форму
+              })
+              .catch(error => {
+                  console.error('Помилка при надсиланні повідомлення:', error);
+                  alert('Сталася помилка. Спробуйте ще раз.');
+              });
+          });
+        </script>
         <script>
           document.addEventListener("DOMContentLoaded", () => {
             const player = new Plyr("#plyr-player", {
