@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balance Wheel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      body {
+        background: #fff9f0;
+        font-family: "Inter", sans-serif;
+      }
+
+      header {
+        background: linear-gradient(90deg, #e8bbc0, #f7d000);
+        padding: 2rem;
+        border-radius: 0.75rem;
+        color: white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .sphere-item input {
+        margin-right: 0.5rem;
+      }
+
+      button {
+        transition: transform 0.2s ease-in-out, background-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      button:active {
+        transform: scale(0.95);
+      }
+
+      .bg-gray-500 {
+        background-color: #101267 !important;
+      }
+
+      .bg-blue-500 {
+        background-color: #f7d000 !important;
+      }
+
+      .bg-green-500 {
+        background-color: #e8bbc0 !important;
+      }
+
+      .hover\:bg-gray-700:hover {
+        background-color: #0d0b4e !important;
+      }
+
+      .hover\:bg-blue-700:hover {
+        background-color: #c4a300 !important;
+      }
+
+      .hover\:bg-green-700:hover {
+        background-color: #d6a3a9 !important;
+      }
+
+      canvas {
+        border-color: #101267;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col items-center p-5">
+    <header class="w-full max-w-5xl mb-5 text-center">
+      <img src="assets/hero.png" alt="" class="rounded-lg shadow-lg" />
+      <h1 class="text-4xl font-bold mb-2">Колесо Балансу</h1>
+      <p class="text-lg text-gray-100">Візуалізація балансу твого життя</p>
+    </header>
+
+    <div
+      class="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 mb-5"
+    >
+      <a
+        href="https://planetaznaniy.org.ua/marathon"
+        class="px-6 py-3 bg-[#101267] hover:scale-105 text-white rounded-lg font-semibold shadow-md text-center transition transform hover:bg-[#0d0f72] hover:text-white"
+      >
+        <i class="fas fa-bolt"></i> Сплануй життя своєї мрії
+      </a>
+
+      <a
+        href="https://www.instagram.com/oshchepkovaganna/"
+        class="px-6 py-3 bg-[#E8BBC0] hover:scale-105 text-gray-800 rounded-lg font-semibold shadow-md text-center transition transform hover:bg-[#E8A9B2] hover:text-white"
+      >
+        <i class="fas fa-user"></i> Про мене
+      </a>
+
+      <a
+        href="https://www.coachingoshchepkova.if.ua/"
+        class="px-6 py-3 bg-[#F7D000] hover:scale-105 text-gray-800 rounded-lg font-semibold shadow-md text-center transition transform hover:bg-[#F7D000] hover:text-white"
+      >
+        <i class="fas fa-calendar-check"></i> Запис на консультацію
+      </a>
+    </div>
+
+    <div class="mt-10 px-6 py-4 bg-white shadow-lg rounded-lg max-w-3xl mb-12">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">
+        Життєвий баланс – ключ до успіху і гармонії!
+      </h2>
+      <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+        У сучасному світі підтримка балансу між роботою і життям – це не просто
+        бажання, це необхідність. Баланс можливий тоді, коли ти сам визначаєш,
+        що для тебе важливо, і керуєш тим, куди спрямовуєш свою енергію, час і
+        увагу.
+      </p>
+      <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+        Життєвий баланс – це про захоплююче, активне життя, а не про
+        «виживання». Це про розвиток, новий досвід і радість від справ, які
+        надихають.
+      </p>
+      <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+        Пандемія, війна, економічні виклики – усе це впливає на нас. Але навіть
+        у таких умовах баланс і гармонія можливі. Збалансована, сильна,
+        самореалізована і вмотивована людина здатна змінити своє життя на краще.
+      </p>
+      <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+        Прийми рішення прямо зараз: почни поступово повертати собі контроль над
+        своїм життям. Навчися керувати своїм «колесом життєвого балансу» так,
+        щоб воно рухало тебе вперед без зайвих зусиль.
+      </p>
+    </div>
+
+    <main class="flex flex-col items-center w-full max-w-5xl">
+      <div class="relative mb-8">
+        <canvas
+          id="canvas"
+          width="800"
+          height="800"
+          class="border border-gray-300 shadow-lg rounded-lg bg-[#FFF9F0]"
+        ></canvas>
+      </div>
+
+      <div id="accordion" class="w-full max-w-3xl space-y-4">
+        <!-- Accordion items will be generated dynamically -->
+      </div>
+
+      <div
+        class="mt-10 px-6 py-4 bg-white shadow-lg rounded-lg max-w-3xl mb-12"
+      >
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          Як працювати з Колесом балансу:
+        </h2>
+        <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+          З'єднані лінії на колесі дають наглядно зрозуміти поточну ситуацію. Це
+          те колесо, на якому ти їдеш по життю. Що ти бачиш? Хочеш щось з цим
+          зробити? Потрібно щось змінювати?
+        </p>
+        <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+          А якщо ти одну область зміниш на пункт? Подумай, просування в якій
+          області спровокує зміни у всіх інших сегментах? Яка то буде сфера?
+        </p>
+        <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+          Якщо зміни в цій області не потягли за собою зміни по всім іншим, то
+          шукай далі. Обери ту сферу, покращення в якій найбільш сильно і швидко
+          вплинуть на твоє життя. Відміть її цифрою 1.
+        </p>
+        <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+          Обери ту сферу, зміни в якій будуть на другому місці, відміть її
+          цифрою 2. Це твій вектор подальшого розвитку. Рухайся в цьому
+          напрямку! Твоя ціль тепер - десятка!
+        </p>
+        <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+          Склади план її досягнення. Що прямо зараз ти можеш зробити щоб
+          просунутись до омріяного ідеалу?
+        </p>
+        <p class="text-lg text-gray-600 mb-4 leading-relaxed font-semibold">
+          Я як коуч готова допомогти тобі на цьому шляху!
+        </p>
+        <p class="text-lg text-gray-600 mb-4 leading-relaxed font-semibold">
+          Зроби свій перший крок до балансу сьогодні – ти цього вартий!
+        </p>
+      </div>
+      <div
+        class="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0"
+      >
+        <button
+          id="download"
+          class="px-6 py-3 bg-[#101267] text-white rounded-md font-semibold shadow-md"
+        >
+          Завантажити
+        </button>
+      </div>
+    </main>
+
+    <footer
+      class="w-full max-w-5xl mt-10 px-4 text-center text-gray-600 text-sm"
+    >
+      <div
+        class="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 mb-6"
+      >
+        <a
+          href="https://planetaznaniy.org.ua/marathon"
+          class="px-6 py-3 bg-[#101267] text-white rounded-lg font-semibold shadow-md text-center transition transform hover:bg-[#0d0f72] hover:text-white"
+        >
+          Сплануй життя своєї мрії
+        </a>
+        <a
+          href="https://www.instagram.com/oshchepkovaganna/"
+          class="px-6 py-3 bg-[#E8BBC0] text-gray-800 rounded-lg font-semibold shadow-md text-center transition transform hover:bg-[#E8A9B2] hover:text-white"
+        >
+          Про мене
+        </a>
+        <a
+          href="https://www.coachingoshchepkova.if.ua/"
+          class="px-6 py-3 bg-[#F7D000] text-gray-800 rounded-lg font-semibold shadow-md text-center transition transform hover:bg-[#F7D000] hover:text-white"
+        >
+          Запис на консультацію
+        </a>
+      </div>
+      <hr class="border-gray-300 mb-5" />
+      <p>
+        © 2024 Balance Wheel by
+        <span class="font-bold">
+          <a
+            href="https://www.instagram.com/__pedelo__/"
+            class="text-blue-500 hover:underline"
+          >
+            __pedelo__
+          </a>
+        </span>
+      </p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
